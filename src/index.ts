@@ -10,6 +10,7 @@ import express from "express"
 //import routes
 import testRoutes from "./routes/testRoutes"
 import productRoutes from "./routes/productRoutes"
+import dbtestRoutes from "./routes/dbtestRoutes"
 
 //create an instance of express
 const app = express()
@@ -20,6 +21,7 @@ app.use(express.json())
 //use Routes from import
 app.use('/api', testRoutes)
 app.use('/api', productRoutes)
+app.use('/api', dbtestRoutes)
 
 //run sever on port 3000
 app.listen(3000, () => {
